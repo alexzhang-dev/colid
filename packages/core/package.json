@@ -17,11 +17,17 @@
     "utils"
   ],
   "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "scripts": {
     "build": "tsup",
     "start": "tsup --watch"
   },
+  "peerDependencies": {
+    "solid-js": "^1"
+  },
   "devDependencies": {
+    "solid-js": "^1.5.8",
     "tsup": "^6.3.0"
   },
   "eslintConfig": {
