@@ -1,0 +1,34 @@
+{
+  "name": "@colid/monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "author": "alexzhang1030",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm --filter @colid/core build",
+    "prepublishOnly": "pnpm build",
+    "prepare": "simple-git-hooks",
+    "up": "taze -r",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.27.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.25.0",
+    "lint-staged": "^13.0.3",
+    "simple-git-hooks": "^2.8.1",
+    "taze": "^0.8.2",
+    "typescript": "^4.8.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "eslint --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
+}

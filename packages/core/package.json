@@ -1,0 +1,30 @@
+{
+  "name": "@colid/core",
+  "version": "0.0.0",
+  "author": "alexzhang1030",
+  "license": "MIT",
+  "homepage": "https://github.com/alexzhang1030/colid#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexzhang1030/colid.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/alexzhang1030/colid/issues"
+  },
+  "keywords": [
+    "solid",
+    "utils"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "start": "tsup --watch"
+  },
+  "devDependencies": {
+    "tsup": "^6.3.0"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
+}
