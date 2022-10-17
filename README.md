@@ -1,6 +1,6 @@
 # Colid
 
-Alternative to Vueuse in Solid-JS, compatibility API.
+Alternative to Vueuse in Solid-JS, using Colid is just like using Vueuse.
 
 ## Installation
 
