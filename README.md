@@ -14,14 +14,14 @@ pnpm install -D solid-js @colid/core
 
 Combine `usePreferredDark`
 
-```ts
+```tsx
 import { useDark } from '@colid/core'
 
 export const Comp = () => {
-  const [dark] = useDark()
+  const [dark, setDark] = useDark()
   createEffect(() => {
     console.log('dark mode: ', dark())
   })
-  return () => null
+  return () => (<div onclick={() => setDark(d => !d)}>{dark()}</div>)
 }
 ```
