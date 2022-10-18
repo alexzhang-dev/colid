@@ -34,7 +34,7 @@ importers:
 
   playground:
     specifiers:
-      '@colid/core': workspace:0.0.1-beta.0
+      '@colid/core': workspace:*
       '@unocss/preset-mini': ^0.45.13
       '@unocss/vite': ^0.45.13
       solid-js: ^1.5.1
