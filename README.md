@@ -18,10 +18,10 @@ Combine `usePreferredDark`
 import { useDark } from '@colid/core'
 
 export const Comp = () => {
-  const [dark, setDark] = useDark()
+  const { isDark, setIsDark } = useDark()
   createEffect(() => {
-    console.log('dark mode: ', dark())
+    console.log('dark mode: ', isDark())
   })
-  return () => (<div onclick={() => setDark(d => !d)}>{dark()}</div>)
+  return () => (<div onclick={() => setIsDark(d => !d)}>{dark()}</div>)
 }
 ```
