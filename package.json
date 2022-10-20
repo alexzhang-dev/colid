@@ -6,6 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "pnpm --filter @colid/core build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm build",
     "prepare": "simple-git-hooks",
     "up": "taze -r",
