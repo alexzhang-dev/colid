@@ -3,10 +3,10 @@ import { useDark } from '@colid/core'
 import { createEffect } from 'solid-js'
 
 const App: Component = () => {
-  const [dark] = useDark()
+  const { isDark } = useDark()
   createEffect(() => {
     // eslint-disable-next-line no-console
-    console.log('dark mode: ', dark())
+    console.log('dark mode: ', isDark())
   })
   return (
     <p class="text-4xl text-green-700 text-center py-20">
