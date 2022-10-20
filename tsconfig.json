@@ -2,19 +2,16 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "ESNext"
-    ],
+    "lib": ["ESNext", "DOM"],
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "strict": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "types": [
-      "vitest/globals",
-      "vitest/importMeta"
-    ]
+    "types": ["vitest/globals", "vitest/importMeta"]
   }
 }
