@@ -1,6 +1,6 @@
 {
   "name": "@colid/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "alexzhang1030",
   "license": "MIT",
   "homepage": "https://github.com/alexzhang1030/colid#readme",
@@ -19,7 +19,9 @@
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "start": "tsup --watch"
