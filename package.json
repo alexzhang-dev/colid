@@ -5,7 +5,7 @@
   "author": "alexzhang1030",
   "license": "MIT",
   "scripts": {
-    "build": "pnpm --filter @colid/core build",
+    "build": "pnpm --filter @colid/shared build && pnpm --filter @colid/core build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "typecheck": "tsc --noEmit",
@@ -25,6 +25,7 @@
     "lint-staged": "^13.0.3",
     "simple-git-hooks": "^2.8.1",
     "taze": "^0.8.2",
+    "type-fest": "^3.1.0",
     "typescript": "^4.8.4",
     "unplugin-auto-import": "^0.11.2",
     "vitest": "^0.24.3"

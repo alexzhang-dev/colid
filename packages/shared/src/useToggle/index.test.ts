@@ -4,31 +4,28 @@ import { useToggle } from '.'
 
 describe('useToggle', () => {
   test('toggle', () => {
-    const { value, setValue, toggle } = useToggle(true)
-    expect(value()).toBe(true)
-    setValue(false)
-    expect(value()).toBe(false)
-    toggle()
-    expect(value()).toBe(true)
-    setValue(false)
-    expect(value()).toBe(false)
-    setValue(v => !v)
+    const { value, toggle } = useToggle(true)
     expect(value()).toBe(true)
     toggle()
     expect(value()).toBe(false)
   })
 
-  test('toggle accessor', () => {
+  test('receive accessor as param', () => {
     const [rawVal] = createSignal(false)
-    const { value, setValue, toggle } = useToggle(rawVal())
+    const { value, toggle } = useToggle(rawVal())
     expect(value()).toBe(false)
     toggle()
     expect(value()).toBe(true)
-    setValue(false)
+  })
+
+  test.skip('accessor effect', () => {
+    const [rawVal, setRawVal] = createSignal(false)
+    const { value, toggle } = useToggle(rawVal)
     expect(value()).toBe(false)
-    setValue(v => !v)
+    setRawVal(true)
     expect(value()).toBe(true)
     toggle()
     expect(value()).toBe(false)
+    expect(rawVal()).toBe(false)
   })
 })

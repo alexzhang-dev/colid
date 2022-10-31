@@ -11,6 +11,7 @@ importers:
       lint-staged: ^13.0.3
       simple-git-hooks: ^2.8.1
       taze: ^0.8.2
+      type-fest: ^3.1.0
       typescript: ^4.8.4
       unplugin-auto-import: ^0.11.2
       vitest: ^0.24.3
@@ -22,11 +23,22 @@ importers:
       lint-staged: 13.0.3
       simple-git-hooks: 2.8.1
       taze: 0.8.2
+      type-fest: 3.1.0
       typescript: 4.8.4
       unplugin-auto-import: 0.11.2
       vitest: 0.24.3_jsdom@20.0.1
 
   packages/core:
+    specifiers:
+      '@colid/shared': workspace:*
+      solid-js: ^1.5.8
+      tsup: ^6.3.0
+    devDependencies:
+      '@colid/shared': link:../shared
+      solid-js: 1.5.8
+      tsup: 6.3.0
+
+  packages/shared:
     specifiers:
       solid-js: ^1.5.8
       tsup: ^6.3.0
@@ -4677,6 +4689,11 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /type-fest/3.1.0:
+    resolution: {integrity: sha512-StmrZmK3eD9mDF9Vt7UhqthrDSk66O9iYl5t5a0TSoVkHjl0XZx/xuc/BRz4urAXXGHOY5OLsE0RdJFIApSFmw==}
+    engines: {node: '>=14.16'}
     dev: true
 
   /typescript/4.8.4:

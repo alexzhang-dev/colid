@@ -1,5 +1,5 @@
 {
-  "name": "@colid/core",
+  "name": "@colid/shared",
   "version": "0.0.4",
   "author": "alexzhang1030",
   "license": "MIT",
@@ -29,11 +29,7 @@
   "peerDependencies": {
     "solid-js": "^1"
   },
-  "dependencies": {
-    "@colid/shared": "workspace:*"
-  },
   "devDependencies": {
-    "@colid/shared": "workspace:*",
     "solid-js": "^1.5.8",
     "tsup": "^6.3.0"
   },
