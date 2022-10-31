@@ -33,8 +33,9 @@ importers:
       '@colid/shared': workspace:*
       solid-js: ^1.5.8
       tsup: ^6.3.0
-    devDependencies:
+    dependencies:
       '@colid/shared': link:../shared
+    devDependencies:
       solid-js: 1.5.8
       tsup: 6.3.0
 

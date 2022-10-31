@@ -2,6 +2,7 @@
   "name": "@colid/monorepo",
   "version": "0.0.5",
   "private": true,
+  "packageManager": "pnpm@7.13.4",
   "author": "alexzhang1030",
   "license": "MIT",
   "scripts": {
