@@ -30,7 +30,7 @@ export const Comp = () => {
 
 Toggle given boolean value/Accessor
 
-> NOTICE: solid cannot notify upstream dependencies when you change the upstream ref value, so you need to provide `upstreamSetter` to notify upstream value if necessary.
+> NOTICE: solid cannot notify upstream dependencies when you change the downstream ref value, so you need to provide `upstreamSetter` to notify upstream value if necessary.
 
 ```tsx
 import { useToggle } from '@colid/core'
