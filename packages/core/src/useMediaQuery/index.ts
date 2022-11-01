@@ -1,9 +1,13 @@
 import { createSignal, onCleanup, onMount } from 'solid-js'
 
+function getMediaQuery(query: string, window: Window) {
+  return window.matchMedia(query)
+}
+
 export function useMediaQuery(query: string, window: Window) {
   const isSupport = 'matchMedia' in window && typeof window.matchMedia === 'function'
 
-  const [matches, setMatches] = createSignal(false)
+  const [matches, setMatches] = createSignal(isSupport ? getMediaQuery(query, window).matches : false)
 
   let mediaQuery: MediaQueryList | undefined
 
@@ -11,7 +15,7 @@ export function useMediaQuery(query: string, window: Window) {
     if (!isSupport)
       return
 
-    mediaQuery = window.matchMedia(query)
+    mediaQuery = getMediaQuery(query, window)
     setMatches(mediaQuery.matches)
 
     if ('addEventListener' in mediaQuery)

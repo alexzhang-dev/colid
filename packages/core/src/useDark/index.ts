@@ -2,11 +2,11 @@ import { createEffect, createMemo, createSignal } from 'solid-js'
 import { usePreferredDark } from '../usePreferredDark'
 
 export function useDark() {
-  const [isDark, setIsDark] = createSignal(false)
   const preferredDark = usePreferredDark()
+  const [isDark, setIsDark] = createSignal(preferredDark())
 
   createMemo(() => {
-    setIsDark(preferredDark())
+    setIsDark(d => d === preferredDark() ? d : !d)
   })
   createEffect(() => {
     document.documentElement.classList.toggle('dark', isDark())
